@@ -14,6 +14,7 @@ const prodConfig = {
     //this template in naming them
     //done for caching issues
     filename: '[name].[contenthash].js',
+    publicPath: '/container/latest/'
   },
   plugins: [
     new ModuleFederationPlugin({
