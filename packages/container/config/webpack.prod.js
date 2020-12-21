@@ -14,18 +14,18 @@ const prodConfig = {
     //this template in naming them
     //done for caching issues
     filename: '[name].[contenthash].js',
-    publicPath: '/container/latest/'
+    publicPath: '/container/latest/',
   },
   plugins: [
     new ModuleFederationPlugin({
       name: 'container',
       //where we should go to get some source code
       remotes: {
-        marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`
+        marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
       },
-      shared: packageJson.dependencies
-    })
-  ]
+      shared: packageJson.dependencies,
+    }),
+  ],
 };
 
-module.exports = merge(commonConfig,prodConfig);
+module.exports = merge(commonConfig, prodConfig);
